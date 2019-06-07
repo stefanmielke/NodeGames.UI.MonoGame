@@ -1,0 +1,12 @@
+language: csharp
+solution: NodeGames.UI.MonoGame.sln
+install:
+  - nuget restore NodeGames.UI.MonoGame.sln
+script:
+  - xbuild NodeGames.UI.MonoGame.sln /p:TargetFrameworkVersion="v4.7" /p:Configuration=Release
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: chmod +x ./deploy.sh && ./deploy.sh $nuget_key https://api.nuget.org/v3/index.json 1.0.$TRAVIS_BUILD_NUMBER
+  on:
+    branch: master
