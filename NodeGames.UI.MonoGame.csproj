@@ -34,6 +34,12 @@
     <Reference Include="MonoGame.Framework, Version=3.8.0.402, Culture=neutral, PublicKeyToken=null">
       <HintPath>C:\Program Files (x86)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="NodeGames.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\NodeGames.Core.1.0.6\lib\netstandard2.0\NodeGames.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NodeGames.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\NodeGames.UI.1.0.2\lib\netstandard2.0\NodeGames.UI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,14 +60,7 @@
     <Compile Include="Texture.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NodeGames.Core\NodeGames.Core.csproj">
-      <Project>{3aeb4cd8-bee6-4786-81de-23b9a507ef25}</Project>
-      <Name>NodeGames.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NodeGames.UI\NodeGames.UI.csproj">
-      <Project>{8a83fdf8-b82d-4b21-ad12-e70491f75155}</Project>
-      <Name>NodeGames.UI</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
